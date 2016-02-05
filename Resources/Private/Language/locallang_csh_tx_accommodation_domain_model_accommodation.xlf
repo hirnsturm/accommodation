@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-05T10:26:28Z" product-name="accommodation">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="teaser.description">
+				<source>teaser</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="occupancy.description">
+				<source>occupancy</source>
+			</trans-unit>
+			<trans-unit id="price.description">
+				<source>price</source>
+			</trans-unit>
+			<trans-unit id="unit.description">
+				<source>unit</source>
+			</trans-unit>
+			<trans-unit id="price_information.description">
+				<source>priceInformation</source>
+			</trans-unit>
+			<trans-unit id="main_image.description">
+				<source>mainImage</source>
+			</trans-unit>
+			<trans-unit id="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="facilities.description">
+				<source>facilities</source>
+			</trans-unit>
+			<trans-unit id="reservations.description">
+				<source>reservations</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

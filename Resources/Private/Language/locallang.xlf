@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-05T10:26:28Z" product-name="accommodation">
+		<header/>
+		<body>
+			<trans-unit id="tx_accommodation_domain_model_accommodation">
+				<source>Accommodation</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.occupancy">
+				<source>Occupancy</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.unit">
+				<source>Unit</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.price_information">
+				<source>Price Information</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.main_image">
+				<source>Main Image</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.facilities">
+				<source>Facilities</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.reservations">
+				<source>Reservations</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_facility">
+				<source>Facility</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_facility.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation">
+				<source>Reservation</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.surname">
+				<source>Surname</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.number_of_people">
+				<source>Number Of People</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.privacy_confirmation">
+				<source>Privacy Confirmation</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.salutation">
+				<source>Salutation</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.accommodation">
+				<source>Accommodation</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_salutation">
+				<source>Salutation</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_salutation.name">
+				<source>Name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,67 @@
+
+plugin.tx_accommodation_list {
+	view {
+		templateRootPaths.0 = {$plugin.tx_accommodation_list.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_accommodation_list.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_accommodation_list.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_accommodation_list.persistence.storagePid}
+	}
+}
+
+plugin.tx_accommodation_show {
+	view {
+		templateRootPaths.0 = {$plugin.tx_accommodation_show.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_accommodation_show.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_accommodation_show.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_accommodation_show.persistence.storagePid}
+	}
+}
+
+plugin.tx_accommodation_reservation {
+	view {
+		templateRootPaths.0 = {$plugin.tx_accommodation_reservation.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_accommodation_reservation.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_accommodation_reservation.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_accommodation_reservation.persistence.storagePid}
+	}
+}
+
+plugin.tx_accommodation._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-accommodation table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-accommodation table th {
+		font-weight:bold;
+	}
+
+	.tx-accommodation table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)
