@@ -75,4 +75,30 @@ class SalutationTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 			$this->subject
 		);
 	}
+
+	/**
+	 * @test
+	 */
+	public function getIconReturnsInitialValueForFileReference()
+	{
+		$this->assertEquals(
+			NULL,
+			$this->subject->getIcon()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setIconForFileReferenceSetsIcon()
+	{
+		$fileReferenceFixture = new \TYPO3\CMS\Extbase\Domain\Model\FileReference();
+		$this->subject->setIcon($fileReferenceFixture);
+
+		$this->assertAttributeEquals(
+			$fileReferenceFixture,
+			'icon',
+			$this->subject
+		);
+	}
 }

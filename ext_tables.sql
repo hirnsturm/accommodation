@@ -146,6 +146,7 @@ CREATE TABLE tx_accommodation_domain_model_salutation (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
+	icon int(11) unsigned NOT NULL default '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
