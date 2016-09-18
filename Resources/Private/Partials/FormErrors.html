@@ -1,13 +1,17 @@
-
-<f:form.validationResults for="{object}">
+<f:form.validationResults for="{objectName}">
 	<f:if condition="{validationResults.flattenedErrors}">
-		<ul>
 		<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
-			<li>
-			{propertyPath}: <ul>
-				<f:for each="{errors}" as="error"><li>{error}</li></f:for>
-				</ul>
-			</li>
-		</f:for></ul>
-</f:if>
+			<f:if condition="{propertyPath} == {propertyName}">
+				<f:for each="{errors}" as="error">
+					<div>
+						<div class="alert alert-danger" role="alert">
+							<f:translate key="validator.{objectName}.{propertyPath}.{error.code}" htmlEscape="false">
+								{error.message}
+							</f:translate>
+						</div>
+					</div>
+				</f:for>
+			</f:if>
+		</f:for>
+	</f:if>
 </f:form.validationResults>

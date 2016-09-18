@@ -44,7 +44,6 @@ class Salutation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * icon
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @validate NotEmpty
      */
     protected $icon = null;
     

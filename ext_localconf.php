@@ -37,13 +37,13 @@ if (!defined('TYPO3_MODE')) {
 	'Sle.' . $_EXTKEY,
 	'Reservation',
 	array(
-		'Reservation' => 'new, create',
+		'Reservation' => 'new, create, success',
 		
 	),
 	// non-cacheable actions
 	array(
 		'Accommodation' => '',
-		'Reservation' => 'create',
+		'Reservation' => 'create, success',
 		
 	)
 );

@@ -1,0 +1,20 @@
+{namespace freeCap=SJBR\SrFreecap\ViewHelpers}
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <label for="sjbr-freecap-captcha-response" class="required">
+            {freeCap:translate(key: 'notice')}
+            {freeCap:translate(key: 'explain')}
+        </label>
+        <f:form.textfield id="sjbr-freecap-captcha-response"
+                          required="1"
+                          property="captcha"
+                          size="15"
+                          class="form-control"
+                          title="{freeCap:translate(key: 'notice')}{freeCap:translate(key: 'explain')}"
+                          additionalAttributes="{autocomplete:'off'}"  />
+        <span class="help-block with-errors"></span>
+        <freeCap:image/>
+        <freeCap:audio/>
+    </div>
+</div>

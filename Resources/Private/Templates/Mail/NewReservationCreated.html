@@ -1,0 +1,13 @@
+Unterkunft: "{newReservation.accommodation.name}"
+
+Name: {newReservation.salutation.name} {newReservation.name} {newReservation.surname}
+E-Mail: {newReservation.email}
+Tel.: {newReservation.phone}
+
+Anreise: <f:format.date format="d.m.Y">{newReservation.arrival}</f:format.date>
+Abreise: <f:format.date format="d.m.Y">{newReservation.departure}</f:format.date>
+
+Anzahl der Gäste: {newReservation.numberOfPeople}
+
+Anmerkungen:
+{newReservation.message}

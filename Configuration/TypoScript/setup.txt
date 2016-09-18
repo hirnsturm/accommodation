@@ -1,67 +1,66 @@
-
 plugin.tx_accommodation_list {
-	view {
-		templateRootPaths.0 = {$plugin.tx_accommodation_list.view.templateRootPath}
-		partialRootPaths.0 = {$plugin.tx_accommodation_list.view.partialRootPath}
-		layoutRootPaths.0 = {$plugin.tx_accommodation_list.view.layoutRootPath}
-	}
-	persistence {
-		storagePid = {$plugin.tx_accommodation_list.persistence.storagePid}
-	}
+    view {
+        templateRootPaths.0 = {$plugin.tx_accommodation_list.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_accommodation_list.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_accommodation_list.view.layoutRootPath}
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_accommodation_list.persistence.storagePid}
+    }
 }
 
 plugin.tx_accommodation_show {
-	view {
-		templateRootPaths.0 = {$plugin.tx_accommodation_show.view.templateRootPath}
-		partialRootPaths.0 = {$plugin.tx_accommodation_show.view.partialRootPath}
-		layoutRootPaths.0 = {$plugin.tx_accommodation_show.view.layoutRootPath}
-	}
-	persistence {
-		storagePid = {$plugin.tx_accommodation_show.persistence.storagePid}
-	}
+    view {
+        templateRootPaths.0 = {$plugin.tx_accommodation_show.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_accommodation_show.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_accommodation_show.view.layoutRootPath}
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_accommodation_show.persistence.storagePid}
+    }
 }
 
 plugin.tx_accommodation_reservation {
-	view {
-		templateRootPaths.0 = {$plugin.tx_accommodation_reservation.view.templateRootPath}
-		partialRootPaths.0 = {$plugin.tx_accommodation_reservation.view.partialRootPath}
-		layoutRootPaths.0 = {$plugin.tx_accommodation_reservation.view.layoutRootPath}
-	}
-	persistence {
-		storagePid = {$plugin.tx_accommodation_reservation.persistence.storagePid}
-	}
+    view {
+        templateRootPaths.0 = {$plugin.tx_accommodation_reservation.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_accommodation_reservation.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_accommodation_reservation.view.layoutRootPath}
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_accommodation_reservation.persistence.storagePid}
+    }
 }
 
-plugin.tx_accommodation._CSS_DEFAULT_STYLE (
-	textarea.f3-form-error {
-		background-color:#FF9F9F;
-		border: 1px #FF0000 solid;
-	}
+#
+# Settings for tx_accommodation_reservation
+#
+plugin.tx_accommodation_reservation.settings {
+    #
+    # E-Mail configuration fforr reservation
+    #
+    mail.reservation {
+        enableSendMail = 1
+        from {
+            # Format: 0 = Email-Adresse;Name
+        }
 
-	input.f3-form-error {
-		background-color:#FF9F9F;
-		border: 1px #FF0000 solid;
-	}
+        to {
+            # Format: 0 = Email-Adresse;Name
+        }
 
-	.tx-accommodation table {
-		border-collapse:separate;
-		border-spacing:10px;
-	}
+        cc {
+            # Format: 0 = Email-Adresse;Name
+        }
 
-	.tx-accommodation table th {
-		font-weight:bold;
-	}
+        bcc {
+            # Format: 0 = Email-Adresse;Name
+        }
 
-	.tx-accommodation table td {
-		vertical-align:top;
-	}
+        subject = LLL:EXT:accommodation/Resources/Private/Language/locallang.xlf:mail.newReservation.subject
 
-	.typo3-messages .message-error {
-		color:red;
-	}
-
-	.typo3-messages .message-ok {
-		color:green;
-	}
-
-)
+        mailTemplates = EXT:accommodation/Resources/Private/Templates/Mail/NewReservationCreated.html
+    }
+}

@@ -1,29 +1,123 @@
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'salutation'}" />
+<div class="form-group">
+    <label for="salutation" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.salutation"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.select property="salutation"
+                       options="{salutations}"
+                       optionLabelField="name"
+                       class="form-control required"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'name'}" />
+<div class="form-group">
+    <label for="name" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.name"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="name" class="form-control"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'surname'}" />
+<div class="form-group">
+    <label for="surname" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.surname"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="surname" class="form-control required"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'email'}" />
+<div class="form-group">
+    <label for="email" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.email"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="email" class="form-control required"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'phone'}" />
+<div class="form-group">
+    <label for="phone" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.phone"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="phone" class="form-control required"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'arrival'}" />
+<div class="form-group">
+    <label for="arrival" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.arrival"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="arrival"
+                          value="{newReservation.arrival->f:format.date(format : 'd.m.Y')}"
+                          class="form-control required datepicker-{uid}"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'departure'}" />
+<div class="form-group">
+    <label for="departure" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.departure"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="departure"
+                          value="{newReservation.departure->f:format.date(format : 'd.m.Y')}"
+                          class="form-control required datepicker-{uid}"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'numberOfPeople'}" />
+<div class="form-group">
+    <label for="numberOfPeople" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.number_of_people"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.textfield property="numberOfPeople" class="form-control required"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'message'}" />
+<div class="form-group">
+    <label for="message" class="col-sm-2 control-label">
+        <f:translate key="tx_accommodation_domain_model_reservation.message"/>
+    </label>
+    <div class="col-sm-10">
+        <f:form.textarea property="message"
+                         cols="40"
+                         rows="15"
+                         class="form-control"/>
+    </div>
+</div>
+<f:render partial="FormErrors" arguments="{objectName: 'newReservation', propertyName: 'privacyConfirmation'}" />
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+            <label for="privacyConfirmation">
+                <f:form.checkbox property="privacyConfirmation"
+                                 value="1"
+                                 class="required"/><f:link.page
+                    pageUid="{settings.ff.pidPrivacyConfirmation}"
+                    target="_blank"
+                    title="{f:translate(key: 'privacy_confirmation.pageOfDataPrivacyStatement.title')}">{f:translate(key: 'privacy_confirmation.pageOfDataPrivacyStatement')}</f:link.page>
+                <f:translate key="tx_accommodation_domain_model_reservation.privacy_confirmation"/>
+            </label>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-<label for="name">
-	<f:translate key="tx_accommodation_domain_model_reservation.name" />
-</label><br />
-	<f:form.textfield property="name" /><br />
-<label for="surname">
-	<f:translate key="tx_accommodation_domain_model_reservation.surname" /> <span class="required">(required)</span>
-</label><br />
-	<f:form.textfield property="surname" /><br />
-<label for="email">
-	<f:translate key="tx_accommodation_domain_model_reservation.email" /> <span class="required">(required)</span>
-</label><br />
-	<f:form.textfield property="email" /><br />
-<label for="phone">
-	<f:translate key="tx_accommodation_domain_model_reservation.phone" /> <span class="required">(required)</span>
-</label><br />
-	<f:form.textfield property="phone" /><br />
-<label for="numberOfPeople">
-	<f:translate key="tx_accommodation_domain_model_reservation.number_of_people" /> <span class="required">(required)</span>
-</label><br />
-	<f:form.textfield property="numberOfPeople" /><br />
-<label for="message">
-	<f:translate key="tx_accommodation_domain_model_reservation.message" />
-</label><br />
-	<f:form.textarea property="message" cols="40" rows="15" /><br />
-<label for="privacyConfirmation">
-	<f:translate key="tx_accommodation_domain_model_reservation.privacy_confirmation" /> <span class="required">(required)</span>
-</label><br />
-	<f:form.checkbox property="privacyConfirmation" value="1" /><br />
+<div id="accommodation-{uid}" data-date-format="{f:translate(key: 'date_format_datepicker')}" />
+
+<script type="text/javascript">
+    jQuery(function () {
+        var uid = {uid};
+
+        jQuery('.datepicker-' + uid).datepicker({
+            dateFormat: jQuery('#accommodation-' + uid).data('date-format'),
+            minDate: new Date()
+        });
+    });
+</script>

@@ -1,144 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-05T10:44:04Z" product-name="accommodation">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-02-05T10:44:04Z" product-name="accommodation">
 		<header/>
 		<body>
 			<trans-unit id="tx_accommodation_domain_model_accommodation">
-				<source>Accommodation</source>
+				<target>Unterkunft</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.name">
-				<source>Name</source>
+				<target>Name</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.teaser">
-				<source>Teaser</source>
+				<target>Teaser</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.description">
-				<source>Description</source>
+				<target>Beschreibung</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.occupancy">
-				<source>Occupancy</source>
+				<target>Belegung</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.price">
-				<source>Price</source>
+				<target>Preis</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.currency">
-				<source>Currency</source>
+				<target>Währung</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.unit">
-				<source>Price Unit</source>
+				<target>Preis-Einheit</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.price_information">
-				<source>Price Information</source>
+				<target>Preis-Information</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.main_image">
-				<source>Main Image</source>
+				<target>Hauptbild</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.images">
-				<source>Images</source>
+				<target>Bilder</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.facilities">
-				<source>Facilities</source>
+				<target>Ausstattungen</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_accommodation.reservations">
-				<source>Reservations</source>
+				<target>Reservierungen</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_facility">
-				<source>Facility</source>
+				<target>Ausstattung</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_facility.name">
-				<source>Name</source>
+				<target>Name</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation">
-				<source>Reservation</source>
+				<target>Reservierung</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.name">
-				<source>Name</source>
+				<target>Vorname</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.surname">
-				<source>Surname</source>
+				<target>Nachname</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.email">
-				<source>Email</source>
+				<target>E-Mail</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.phone">
-				<source>Phone</source>
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.arrival">
+				<target>Anreise</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.departure">
+				<target>Abreise</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.number_of_people">
-				<source>Number Of People</source>
+				<target>Personenanzahl</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.message">
-				<source>Message</source>
+				<target>Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.internal_note">
+				<target>Interne Notiz</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.privacy_confirmation">
-				<source>I agree with the %s.</source>
+				<target>Datenschutzerklärung zustimmen</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.salutation">
-				<source>Salutation</source>
+				<target>Anrede</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.status">
+				<target>Status</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.accommodation">
-				<source>Accommodation</source>
+				<target>Unterkunft</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_salutation">
-				<source>Salutation</source>
+				<target>Anrede</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_salutation.name">
-				<source>Name</source>
+				<target>Name</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_salutation.icon">
-				<source>Icon</source>
+				<target>Symbol</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_status">
-				<source>Status</source>
+				<target>Status</target>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_status.name">
-				<source>Name</source>
+				<target>Name</target>
 			</trans-unit>
-			<trans-unit id="privacy_confirmation.pageOfDataPrivacyStatement">
-				<source>Privacy Policy</source>
-			</trans-unit>
-			<trans-unit id="privacy_confirmation.pageOfDataPrivacyStatement.title">
-				<source>Privacy Policy</source>
-			</trans-unit>
-
-			<!---->
-			<trans-unit id="date_format">
-                <source>d/m/Y</source>
-            </trans-unit>
-			<trans-unit id="date_format_datepicker">
-                <source>dd/mm/yy</source>
-            </trans-unit>
-
-            <!-- Mail -->
-			<trans-unit id="mail.newReservation.subject">
-                <source>New Reservation for Accommodation %s</source>
-            </trans-unit>
-
-			<!-- FlexForms -->
-			<trans-unit id="fflabel.reservation.general">
-				<source>General</source>
-			</trans-unit>
-			<trans-unit id="fflabel.reservation.general.storagePid">
-				<source>Datasource</source>
-			</trans-unit>
-			<trans-unit id="fflabel.reservation.general.accommodation">
-				<source>Accommodation</source>
-			</trans-unit>
-			<trans-unit id="fflabel.reservation.general.pidDataPrivacyStatement">
-				<source>Page of Data Privacy Statement</source>
-			</trans-unit>
-
-			<!-- Buttons -->
-			<trans-unit id="button.submit">
-				<source>Submit</source>
-			</trans-unit>
-
-			<!-- Flash Messages -->
-            <trans-unit id="flashMessage.formular.invalid">
-                <target>Please check your inputs.</target>
-            </trans-unit>
-            <trans-unit id="flashMessage.reservation.created">
-                <target>Thank you for your request.</target>
-            </trans-unit>
 		</body>
 	</file>
 </xliff>

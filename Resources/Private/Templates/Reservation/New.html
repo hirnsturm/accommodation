@@ -1,26 +1,19 @@
-
-<f:layout name="Default" />
-
-This template displays a NEW form for the current domain object.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        New.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<f:layout name="Default"/>
 
 <f:section name="main">
-<h1>New Reservation</h1>
-
-<f:flashMessages />
-
-<f:render partial="FormErrors" arguments="{object:Reservation}" />
-
-<f:form action="create"  enctype="multipart/form-data"  name="newReservation" object="{newReservation}">
-<f:render partial="Reservation/FormFields" />
-	<f:form.submit value="Create new" />
-</f:form>
+    <div>
+        <f:flashMessages renderMode="div" />
+        <f:form action="create"
+                enctype="multipart/form-data"
+                name="newReservation"
+                object="{newReservation}"
+                class="form-horizontal">
+            <f:render partial="Reservation/FormFields" arguments="{_all}"/>
+            <div class="form-group">
+                <f:render partial="Captcha" />
+                <f:form.submit value="{f:translate(key: 'button.submit', default: 'Submit')}"
+                               class="btn btn-default pull-right"/>
+            </div>
+        </f:form>
+    </div>
 </f:section>

@@ -1,6 +1,9 @@
 <?php
 namespace Sle\Accommodation\Controller;
 
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -27,39 +30,44 @@ namespace Sle\Accommodation\Controller;
  ***************************************************************/
 
 /**
- * AccommodationController
+ * BaseController
  */
-class AccommodationController extends BaseController
+class BaseController extends ActionController
 {
 
     /**
-     * accommodationRepository
+     * cObject
      *
-     * @var \Sle\Accommodation\Domain\Repository\AccommodationRepository
-     * @inject
+     * @var object
      */
-    protected $accommodationRepository = null;
+    protected $cObject = null;
 
     /**
-     * action list
-     *
-     * @return void
+     * The uid of the current content element
+     * @var int
      */
-    public function listAction()
-    {
-        $accommodations = $this->accommodationRepository->findAll();
-        $this->view->assign('accommodations', $accommodations);
-    }
-    
+    protected $uid = null;
+
     /**
-     * action show
      *
-     * @param \Sle\Accommodation\Domain\Model\Accommodation $accommodation
-     * @return void
      */
-    public function showAction(\Sle\Accommodation\Domain\Model\Accommodation $accommodation)
+    public function initializeAction()
     {
-        $this->view->assign('accommodation', $accommodation);
+        $this->cObject = $this->configurationManager->getContentObject();
+        $this->uid = $this->cObject->data['uid'];
+    }
+
+    /**
+     *
+     */
+    public function initializeView(ViewInterface $view)
+    {
+        $this->view->assignMultiple(
+            array(
+                'cObject' => $this->cObject,
+                'uid'     => $this->uid,
+            )
+        );
     }
 
 }

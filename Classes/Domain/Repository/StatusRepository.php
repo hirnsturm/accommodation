@@ -1,5 +1,5 @@
 <?php
-namespace Sle\Accommodation\Controller;
+namespace Sle\Accommodation\Domain\Repository;
 
 /***************************************************************
  *
@@ -27,39 +27,9 @@ namespace Sle\Accommodation\Controller;
  ***************************************************************/
 
 /**
- * AccommodationController
+ * The repository for Status
  */
-class AccommodationController extends BaseController
+class StatusRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-
-    /**
-     * accommodationRepository
-     *
-     * @var \Sle\Accommodation\Domain\Repository\AccommodationRepository
-     * @inject
-     */
-    protected $accommodationRepository = null;
-
-    /**
-     * action list
-     *
-     * @return void
-     */
-    public function listAction()
-    {
-        $accommodations = $this->accommodationRepository->findAll();
-        $this->view->assign('accommodations', $accommodations);
-    }
-    
-    /**
-     * action show
-     *
-     * @param \Sle\Accommodation\Domain\Model\Accommodation $accommodation
-     * @return void
-     */
-    public function showAction(\Sle\Accommodation\Domain\Model\Accommodation $accommodation)
-    {
-        $this->view->assign('accommodation', $accommodation);
-    }
 
 }

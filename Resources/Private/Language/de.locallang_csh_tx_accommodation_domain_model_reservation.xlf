@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-05T10:26:28Z" product-name="accommodation">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-02-05T10:44:04Z" product-name="accommodation">
 		<header/>
 		<body>
 			<trans-unit id="name.description">
-				<source>name</source>
+				<target>Vorname</target>
 			</trans-unit>
 			<trans-unit id="surname.description">
-				<source>surname</source>
+				<target>Nachname</target>
 			</trans-unit>
 			<trans-unit id="email.description">
-				<source>email</source>
+				<target>E-Mail</target>
 			</trans-unit>
 			<trans-unit id="phone.description">
-				<source>phone</source>
+				<target>Telefon</target>
 			</trans-unit>
-			<trans-unit id="arrvial.description">
-				<source>arrival</source>
+			<trans-unit id="arrival.description">
+				<target>Anreise</target>
 			</trans-unit>
 			<trans-unit id="departure.description">
-				<source>departure</source>
+				<target>Abreise</target>
 			</trans-unit>
 			<trans-unit id="number_of_people.description">
-				<source>numberOfPeople</source>
+				<target>Personenanzahl</target>
 			</trans-unit>
 			<trans-unit id="message.description">
-				<source>message</source>
+				<target>Anmerkungen</target>
 			</trans-unit>
 			<trans-unit id="privacy_confirmation.description">
-				<source>privacyConfirmation</source>
+				<target>privacyConfirmation</target>
 			</trans-unit>
-			<trans-unit id="internal_note.description">
-				<source>internalNote</source>
+			<trans-unit id="salutation.description">
+				<target>Anrede</target>
+			</trans-unit>
+			<trans-unit id="accommodation.description">
+				<target>Unterkunft</target>
 			</trans-unit>
 		</body>
 	</file>

@@ -11,24 +11,23 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Accommodation',
-	'description' => 'A powerful manager for holiday accommodations reservations.',
-	'category' => 'plugin',
-	'author' => 'Steve Lenz',
-	'author_email' => 'kontakt@steve-lenz.de',
-	'state' => 'stable',
-	'internal' => '',
-	'uploadfolder' => '1',
-	'createDirs' => '',
-	'clearCacheOnLoad' => 0,
-	'version' => '0.1.0',
-	'constraints' => array(
-		'depends' => array(
-			'typo3' => '7.6.0-7.6.99',
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
+    'title'            => 'Accommodation',
+    'description'      => 'A powerful manager for holiday accommodations reservations.',
+    'category'         => 'plugin',
+    'author'           => 'Steve Lenz',
+    'author_email'     => 'kontakt@steve-lenz.de',
+    'state'            => 'stable',
+    'internal'         => '',
+    'uploadfolder'     => '1',
+    'createDirs'       => '',
+    'clearCacheOnLoad' => 0,
+    'version'          => '0.1.0',
+    'constraints'      => array(
+        'depends'   => array(
+            'typo3'      => '7.6.0-7.6.99',
+            'sr_freecap' => '2.2.0-2.3.99',
+        ),
+        'conflicts' => array(),
+        'suggests'  => array(),
+    ),
 );

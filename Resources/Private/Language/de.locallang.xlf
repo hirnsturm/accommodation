@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-02-05T10:44:04Z" product-name="accommodation">
+		<header/>
+		<body>
+			<trans-unit id="tx_accommodation_domain_model_accommodation">
+				<target>Unterkunft</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.teaser">
+				<target>Teaser</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.description">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.occupancy">
+				<target>Belegung</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.price">
+				<target>Preis</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.unit">
+				<target>Preis-Einheit</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.price_information">
+				<target>Preis-Information</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.main_image">
+				<target>Hauptbild</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.images">
+				<target>Bilder</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.facilities">
+				<target>Ausstattungen</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_accommodation.reservations">
+				<target>Reservierungen</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_facility">
+				<target>Ausstattung</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_facility.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation">
+				<target>Reservierung</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.name">
+				<target>Vorname</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.surname">
+				<target>Nachname</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.email">
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.phone">
+				<target>Telefonnummer</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.arrival">
+				<target>Anreise</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.departure">
+				<target>Abreise</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.number_of_people">
+				<target>Anzahl der Gäste</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.message">
+				<target>Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.privacy_confirmation">
+				<target>Ich stimme der %s zu</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.salutation">
+				<target>Anrede</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.accommodation">
+				<target>Accommodation</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_salutation">
+				<target>Salutation</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_salutation.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_salutation.icon">
+				<target>Symbol</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_status">
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_status.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="privacy_confirmation.pageOfDataPrivacyStatement">
+				<target>Datenschutzerklärung</target>
+			</trans-unit>
+			<trans-unit id="privacy_confirmation.pageOfDataPrivacyStatement.title">
+				<target>Datenschutzerklärung</target>
+			</trans-unit>
+
+			<!---->
+			<trans-unit id="date_format">
+                <target>d.m.Y</target>
+            </trans-unit>
+			<trans-unit id="date_format_datepicker">
+                <target>dd.mm.yy</target>
+            </trans-unit>
+
+            <!-- Mail -->
+			<trans-unit id="mail.newReservation.subject">
+                <target>Neue Anfrage für die Unterkunft %s</target>
+            </trans-unit>
+
+			<!-- FlexForms -->
+			<trans-unit id="fflabel.reservation.general">
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="fflabel.reservation.general.storagePid">
+				<target>Datenordner</target>
+			</trans-unit>
+			<trans-unit id="fflabel.reservation.general.accommodation">
+				<target>Unterkunft</target>
+			</trans-unit>
+			<trans-unit id="fflabel.reservation.general.pidDataPrivacyStatement">
+				<target>Seite der Datenschutzerklärung</target>
+			</trans-unit>
+
+			<!-- Buttons -->
+			<trans-unit id="button.submit">
+				<target>Abschicken</target>
+			</trans-unit>
+
+			<!-- Flash Messages -->
+            <trans-unit id="flashMessage.formular.invalid">
+                <target>Bitte überprüfen Sie Ihre Eingaben. Sie sind unvollständig oder fehlerhaft.</target>
+            </trans-unit>
+            <trans-unit id="flashMessage.reservation.created">
+                <target>Vielen Dank für Ihre Anfrage.</target>
+            </trans-unit>
+
+            <!-- Validator Messages -->
+            <trans-unit id="validator.newReservation.surname.1221560718">
+                <target>Bitte geben Sie einen Nachnamen an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.email.1221560718">
+                <target>Bitte geben Sie eine E-Mail-Adresse an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.email.1221559976">
+                <target>Bitte geben Sie eine gültige E-Mail-Adresse an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.phone.1221560718">
+                <target>Bitte geben Sie eine Telefonnummer an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.arrival.1221560910">
+                <target>Bitte geben Sie ein Anreise-Datum an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.arrival.1307719788">
+                <target>Bitte geben Sie ein gültiges Anreise-Datum an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.departure.1221560910">
+                <target>Bitte geben Sie ein Abreise-Datum an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.departure.1307719788">
+                <target>Bitte geben Sie ein gültiges Abreise-Datum an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.numberOfPeople.1221560910">
+                <target>Bitte geben Sie die Anzahl der Personen an.</target>
+            </trans-unit>
+            <trans-unit id="validator.newReservation.privacyConfirmation.1221565130">
+                <target>Bitte bestätigen Sie die Datenschutzerklärung.</target>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

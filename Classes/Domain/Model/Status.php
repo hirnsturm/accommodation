@@ -1,5 +1,5 @@
 <?php
-namespace Sle\Accommodation\Controller;
+namespace Sle\Accommodation\Domain\Model;
 
 /***************************************************************
  *
@@ -27,39 +27,38 @@ namespace Sle\Accommodation\Controller;
  ***************************************************************/
 
 /**
- * AccommodationController
+ * Status
  */
-class AccommodationController extends BaseController
+class Status extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
-     * accommodationRepository
+     * name
      *
-     * @var \Sle\Accommodation\Domain\Repository\AccommodationRepository
-     * @inject
+     * @var string
+     * @validate NotEmpty
      */
-    protected $accommodationRepository = null;
-
+    protected $name = '';
+    
     /**
-     * action list
+     * Returns the name
      *
-     * @return void
+     * @return string $name
      */
-    public function listAction()
+    public function getName()
     {
-        $accommodations = $this->accommodationRepository->findAll();
-        $this->view->assign('accommodations', $accommodations);
+        return $this->name;
     }
     
     /**
-     * action show
+     * Sets the name
      *
-     * @param \Sle\Accommodation\Domain\Model\Accommodation $accommodation
+     * @param string $name
      * @return void
      */
-    public function showAction(\Sle\Accommodation\Domain\Model\Accommodation $accommodation)
+    public function setName($name)
     {
-        $this->view->assign('accommodation', $accommodation);
+        $this->name = $name;
     }
 
 }

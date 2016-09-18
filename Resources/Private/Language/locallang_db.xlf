@@ -60,17 +60,29 @@
 			<trans-unit id="tx_accommodation_domain_model_reservation.phone">
 				<source>Phone</source>
 			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.arrival">
+				<source>Arrival</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.departure">
+				<source>Departure</source>
+			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.number_of_people">
 				<source>Number Of People</source>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.message">
 				<source>Message</source>
 			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.internal_note">
+				<source>Internal Note</source>
+			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.privacy_confirmation">
 				<source>Privacy Confirmation</source>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.salutation">
 				<source>Salutation</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_reservation.status">
+				<source>Status</source>
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_reservation.accommodation">
 				<source>Accommodation</source>
@@ -83,6 +95,12 @@
 			</trans-unit>
 			<trans-unit id="tx_accommodation_domain_model_salutation.icon">
 				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_accommodation_domain_model_status.name">
+				<source>Name</source>
 			</trans-unit>
 		</body>
 	</file>

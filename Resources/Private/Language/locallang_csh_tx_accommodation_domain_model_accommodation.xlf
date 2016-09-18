@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-05T10:44:04Z" product-name="accommodation">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-05T10:26:28Z" product-name="accommodation">
 		<header/>
 		<body>
 			<trans-unit id="name.description">
@@ -18,8 +18,11 @@
 			<trans-unit id="price.description">
 				<source>price</source>
 			</trans-unit>
+			<trans-unit id="currency.description">
+				<source>currency</source>
+			</trans-unit>
 			<trans-unit id="unit.description">
-				<source>unit</source>
+				<source>price unit</source>
 			</trans-unit>
 			<trans-unit id="price_information.description">
 				<source>priceInformation</source>

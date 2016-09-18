@@ -73,6 +73,14 @@ class Accommodation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $price = 0.0;
     
     /**
+     * currency
+     *
+     * @var string
+     * @validate NotEmpty
+     */
+    protected $currency = '';
+
+    /**
      * unit
      *
      * @var string
@@ -221,6 +229,22 @@ class Accommodation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+
+    /**
+     * @param string $currency
+     */
+    public function setCurrency($currency)
+    {
+        $this->currency = $currency;
     }
     
     /**

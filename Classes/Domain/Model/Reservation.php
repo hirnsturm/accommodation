@@ -1,30 +1,30 @@
 <?php
 namespace Sle\Accommodation\Domain\Model;
 
-/***************************************************************
- *
- *  Copyright notice
- *
- *  (c) 2016 Steve Lenz <kontakt@steve-lenz.de>
- *
- *  All rights reserved
- *
- *  This script is part of the TYPO3 project. The TYPO3 project is
- *  free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  The GNU General Public License can be found at
- *  http://www.gnu.org/copyleft/gpl.html.
- *
- *  This script is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
+    /***************************************************************
+     *
+     *  Copyright notice
+     *
+     *  (c) 2016 Steve Lenz <kontakt@steve-lenz.de>
+     *
+     *  All rights reserved
+     *
+     *  This script is part of the TYPO3 project. The TYPO3 project is
+     *  free software; you can redistribute it and/or modify
+     *  it under the terms of the GNU General Public License as published by
+     *  the Free Software Foundation; either version 3 of the License, or
+     *  (at your option) any later version.
+     *
+     *  The GNU General Public License can be found at
+     *  http://www.gnu.org/copyleft/gpl.html.
+     *
+     *  This script is distributed in the hope that it will be useful,
+     *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+     *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     *  GNU General Public License for more details.
+     *
+     *  This copyright notice MUST APPEAR in all copies of the script!
+     ***************************************************************/
 
 /**
  * Reservation
@@ -36,71 +36,109 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * name
      *
      * @var string
-     * @validate NotEmpty
+     * @validate
      */
-    protected $name = '';
-    
+    protected $name = null;
+
     /**
      * surname
      *
      * @var string
-     * @validate NotEmpty
+     * @validate NotEmpty, StringLength(minimum=3, maximum=255)
      */
-    protected $surname = '';
-    
+    protected $surname = null;
+
     /**
      * email
      *
      * @var string
-     * @validate NotEmpty
+     * @validate NotEmpty, EmailAddress
      */
-    protected $email = '';
-    
+    protected $email = null;
+
     /**
      * phone
      *
      * @var string
-     * @validate NotEmpty
+     * @validate NotEmpty, String
      */
-    protected $phone = '';
-    
+    protected $phone = null;
+
+    /**
+     * arrival
+     *
+     * @var \DateTime
+     * @validate NotEmpty, DateTime
+     */
+    protected $arrival = null;
+
+    /**
+     * arrival
+     *
+     * @var \DateTime
+     * @validate NotEmpty, DateTime
+     */
+    protected $departure = null;
+
     /**
      * numberOfPeople
      *
      * @var int
-     * @validate NotEmpty
+     * @validate NotEmpty, Integer, NumberRange(minimum="1", maximum="4")
      */
-    protected $numberOfPeople = 0;
-    
+    protected $numberOfPeople = 2;
+
     /**
      * message
      *
      * @var string
+     * @validate String
      */
-    protected $message = '';
-    
+    protected $message = null;
+
+    /**
+     * internalNote
+     *
+     * @var string
+     * @validate String
+     */
+    protected $internalNote = null;
+
     /**
      * privacyConfirmation
      *
      * @var bool
-     * @validate NotEmpty
+     * @validate RegularExpression(regularExpression=/1/)
      */
     protected $privacyConfirmation = false;
-    
+
     /**
      * salutation
      *
      * @var \Sle\Accommodation\Domain\Model\Salutation
      */
     protected $salutation = null;
-    
+
     /**
      * accommodation
      *
      * @var \Sle\Accommodation\Domain\Model\Accommodation
      */
     protected $accommodation = null;
-    
+
+    /**
+     * status
+     *
+     * @var \Sle\Accommodation\Domain\Model\Status
+     */
+    protected $status = null;
+
+    /**
+     * @var string
+     * @validate \SJBR\SrFreecap\Validation\Validator\CaptchaValidator
+     */
+    protected $captcha;
+
     /**
      * Returns the name
      *
@@ -110,7 +148,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->name;
     }
-    
+
     /**
      * Sets the name
      *
@@ -121,7 +159,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->name = $name;
     }
-    
+
     /**
      * Returns the surname
      *
@@ -131,7 +169,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->surname;
     }
-    
+
     /**
      * Sets the surname
      *
@@ -142,7 +180,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->surname = $surname;
     }
-    
+
     /**
      * Returns the email
      *
@@ -152,7 +190,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->email;
     }
-    
+
     /**
      * Sets the email
      *
@@ -163,7 +201,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->email = $email;
     }
-    
+
     /**
      * Returns the phone
      *
@@ -173,7 +211,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->phone;
     }
-    
+
     /**
      * Sets the phone
      *
@@ -184,7 +222,49 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->phone = $phone;
     }
-    
+
+    /**
+     * Returns the arrival
+     *
+     * @return string
+     */
+    public function getArrival()
+    {
+        return $this->arrival;
+    }
+
+    /**
+     * Sets the arrival
+     *
+     * @param string $arrival
+     * @return void
+     */
+    public function setArrival($arrival)
+    {
+        $this->arrival = $arrival;
+    }
+
+    /**
+     * Returns the departure
+     *
+     * @return string
+     */
+    public function getDeparture()
+    {
+        return $this->departure;
+    }
+
+    /**
+     * Sets the departure
+     *
+     * @param string $departure
+     * @return void
+     */
+    public function setDeparture($departure)
+    {
+        $this->departure = $departure;
+    }
+
     /**
      * Returns the salutation
      *
@@ -194,7 +274,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->salutation;
     }
-    
+
     /**
      * Sets the salutation
      *
@@ -205,7 +285,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->salutation = $salutation;
     }
-    
+
     /**
      * Returns the numberOfPeople
      *
@@ -215,7 +295,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->numberOfPeople;
     }
-    
+
     /**
      * Sets the numberOfPeople
      *
@@ -226,7 +306,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->numberOfPeople = $numberOfPeople;
     }
-    
+
     /**
      * Returns the message
      *
@@ -236,7 +316,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->message;
     }
-    
+
     /**
      * Sets the message
      *
@@ -247,7 +327,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->message = $message;
     }
-    
+
     /**
      * Returns the privacyConfirmation
      *
@@ -257,7 +337,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->privacyConfirmation;
     }
-    
+
     /**
      * Sets the privacyConfirmation
      *
@@ -268,7 +348,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->privacyConfirmation = $privacyConfirmation;
     }
-    
+
     /**
      * Returns the boolean state of privacyConfirmation
      *
@@ -278,7 +358,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->privacyConfirmation;
     }
-    
+
     /**
      * Returns the accommodation
      *
@@ -288,7 +368,7 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->accommodation;
     }
-    
+
     /**
      * Sets the accommodation
      *
@@ -298,6 +378,57 @@ class Reservation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setAccommodation(\Sle\Accommodation\Domain\Model\Accommodation $accommodation)
     {
         $this->accommodation = $accommodation;
+    }
+
+    /**
+     * @return status
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param \Sle\Accommodation\Domain\Model\Status $status
+     */
+    public function setStatus(\Sle\Accommodation\Domain\Model\Status $status)
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInternalNote()
+    {
+        return $this->internalNote;
+    }
+
+    /**
+     * @param string $internalNote
+     */
+    public function setInternalNote($internalNote)
+    {
+        $this->internalNote = $internalNote;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCaptcha()
+    {
+        return $this->captcha;
+    }
+
+    /**
+     * @param $captcha
+     * @return $this
+     */
+    public function setCaptcha($captcha)
+    {
+        $this->captcha = $captcha;
+
+        return $this;
     }
 
 }

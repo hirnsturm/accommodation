@@ -1,13 +1,12 @@
 <?php
 return array(
     'ctrl'      => array(
-        'title'                  => 'LLL:EXT:accommodation/Resources/Private/Language/locallang_db.xlf:tx_accommodation_domain_model_facility',
+        'title'                  => 'LLL:EXT:accommodation/Resources/Private/Language/locallang_db.xlf:tx_accommodation_domain_model_status',
         'label'                  => 'name',
         'tstamp'                 => 'tstamp',
         'crdate'                 => 'crdate',
         'cruser_id'              => 'cruser_id',
         'dividers2tabs'          => true,
-        'sortby'                 => 'sorting',
         'versioningWS'           => 2,
         'versioning_followPages' => true,
 
@@ -21,7 +20,7 @@ return array(
             'endtime'   => 'endtime',
         ),
         'searchFields'             => 'name,',
-        'iconfile'                 => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('accommodation') . 'Resources/Public/Icons/tx_accommodation_domain_model_facility.gif'
+        'iconfile'                 => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('accommodation') . 'Resources/Public/Icons/tx_accommodation_domain_model_status.gif'
     ),
     'interface' => array(
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name',
@@ -58,8 +57,8 @@ return array(
                 'items'               => array(
                     array('', 0),
                 ),
-                'foreign_table'       => 'tx_accommodation_domain_model_facility',
-                'foreign_table_where' => 'AND tx_accommodation_domain_model_facility.pid=###CURRENT_PID### AND tx_accommodation_domain_model_facility.sys_language_uid IN (-1,0)',
+                'foreign_table'       => 'tx_accommodation_domain_model_status',
+                'foreign_table_where' => 'AND tx_accommodation_domain_model_status.pid=###CURRENT_PID### AND tx_accommodation_domain_model_status.sys_language_uid IN (-1,0)',
             ),
         ),
         'l10n_diffsource'  => array(
@@ -119,13 +118,12 @@ return array(
 
         'name' => array(
             'exclude' => 0,
-            'label'   => 'LLL:EXT:accommodation/Resources/Private/Language/locallang_db.xlf:tx_accommodation_domain_model_facility.name',
+            'label'   => 'LLL:EXT:accommodation/Resources/Private/Language/locallang_db.xlf:tx_accommodation_domain_model_status.name',
             'config'  => array(
                 'type' => 'input',
                 'size' => 30,
                 'eval' => 'trim,required'
             ),
         ),
-
     ),
 );
